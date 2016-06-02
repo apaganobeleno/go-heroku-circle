@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/apaganobeleno/templo",
+	"ImportPath": "github.com/apaganobeleno/go-heroku-circle",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v72",
 	"Packages": [

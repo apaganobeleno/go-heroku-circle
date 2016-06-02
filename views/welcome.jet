@@ -1,4 +1,8 @@
 {{ extends "layout.jet" }}
-{{ block documentBody }}
-  <h2 class="center"> Welcome to Templo App</h2>
+{{ block content }}
+  {{if .Gophers}}
+  <h1 class="center"> Welcome to This App</h1>
+  {{ else }}
+  <h2>No Gophers Yet!</h2>
+  {{ end }}
 {{ end }}

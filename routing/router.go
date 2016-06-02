@@ -3,7 +3,7 @@ package routing
 import (
 	"net/http"
 
-	"github.com/apaganobeleno/templo/handlers"
+	"github.com/apaganobeleno/go-heroku-circle/handlers"
 	"github.com/bmizerany/pat"
 )
 
@@ -11,7 +11,6 @@ import (
 // usually in combination with Negroni.
 func BuildRouter() *pat.PatternServeMux {
 	router := pat.New()
-	router.Get("/", http.HandlerFunc(handlers.Welcome))
-	router.Get("/hi/:name", http.HandlerFunc(handlers.Templo))
+	router.Get("/", http.HandlerFunc(handlers.Landing))
 	return router
 }

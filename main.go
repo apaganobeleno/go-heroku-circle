@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/apaganobeleno/templo/db"
-	"github.com/apaganobeleno/templo/routing"
+	"github.com/apaganobeleno/go-heroku-circle/db"
+	"github.com/apaganobeleno/go-heroku-circle/routing"
 
 	"github.com/codegangsta/negroni"
 	"github.com/joho/godotenv"

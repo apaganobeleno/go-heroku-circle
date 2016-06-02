@@ -1,3 +1,13 @@
 /**
 App Styles
 **/
+
+.center {text-align: center;}
+.bold {font-weight: 900;}
+
+body {margin-top: 30px;}
+header {
+  padding: 2px;
+  height: 70px;
+  background-color: #F5F5F5;
+}

@@ -1,4 +1,0 @@
-{{ extends "layout.jet" }}
-{{ block documentBody }}
-  <h2> Hello {{.Name}} </h2>
-{{ end }}
