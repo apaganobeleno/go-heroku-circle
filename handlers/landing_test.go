@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"testing"
 
 	"github.com/apaganobeleno/go-heroku-circle/db"
@@ -47,4 +48,24 @@ func TestLandingWithGophers(t *testing.T) {
 	for _, gopher := range gophers {
 		assert.Contains(t, resp.Body.String(), gopher.Name)
 	}
+}
+
+func TestCreateGopher(t *testing.T) {
+	req, _ := http.NewRequest("POST", "/create", nil)
+	req.Form = url.Values{}
+	req.Form.Set("Name", "SQL")
+	req.Form.Set("Company", "Wawandco")
+
+	DB, _ := db.TestConnection()
+	var count int
+	DB.Model(&models.Gopher{}).Count(&count)
+
+	rw := httptest.NewRecorder()
+	CreateGopher(rw, req)
+
+	var countAfter int
+	DB.Model(&models.Gopher{}).Count(&countAfter)
+
+	assert.Equal(t, rw.Code, 302)
+	assert.Equal(t, countAfter, count+1)
 }

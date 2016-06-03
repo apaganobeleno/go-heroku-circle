@@ -12,5 +12,6 @@ import (
 func BuildRouter() *pat.PatternServeMux {
 	router := pat.New()
 	router.Get("/", http.HandlerFunc(handlers.Landing))
+	router.Post("/create", http.HandlerFunc(handlers.CreateGopher))
 	return router
 }

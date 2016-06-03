@@ -6,10 +6,11 @@
       <div class="gopher-container">
         <h4 class=""> Name: {{.Name}}</h1>
       </div>
+
     {{ end }}
+    <a data-toggle="modal"  data-target="#createModal">Agregar Otro</a>
   {{ else }}
     <h4 class="center empty-list">Aún no tenemos ningun Gopher, <a data-toggle="modal"  data-target="#createModal">nos ayudas?</a></h4>
   {{ end }}
-
   {{include "common/modal.html"}}
 {{ end }}

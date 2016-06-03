@@ -27,3 +27,15 @@ func Landing(w http.ResponseWriter, r *http.Request) {
 
 	view.Execute(w, nil, model)
 }
+
+func CreateGopher(w http.ResponseWriter, r *http.Request) {
+	DB, _ := db.Connection()
+	log.Println(r.Form)
+
+	gopher := models.Gopher{}
+	gopher.Name = r.FormValue("Name")
+	gopher.Company = r.FormValue("Company")
+	DB.Create(&gopher)
+
+	http.Redirect(w, r, "/", 302)
+}
