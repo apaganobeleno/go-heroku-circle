@@ -1,4 +1,6 @@
 {{ extends "layout.html" }}
+{{ import "common/modal.html"}}
+
 {{ block content }}
   {{if .Gophers}}
     {{range .Gophers}}
@@ -7,6 +9,10 @@
       </div>
     {{ end }}
   {{ else }}
-    <h4 class="center empty-list">Aún no tenemos ningun Gopher, nos ayudas?</h4>
+    <h4 class="center empty-list">Aún no tenemos ningun Gopher, <a data-toggle="modal"  data-target="#createModal">nos ayudas?</a></h4>
   {{ end }}
+
+
+  {{yield modal}}
+
 {{ end }}
