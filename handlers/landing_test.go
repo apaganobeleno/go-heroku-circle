@@ -18,6 +18,6 @@ func TestLanding(t *testing.T) {
 
 	Landing(resp, req)
 	assert.Equal(t, resp.Code, http.StatusOK)
-	assert.Contains(t, resp.Body.String(), "Gophers BAQ")
-	assert.Contains(t, resp.Body.String(), "No Gophers Yet!")
+	assert.Contains(t, resp.Body.String(), "GophersBAQ")
+	assert.Contains(t, resp.Body.String(), "Aún no tenemos ningun Gopher, nos ayudas?")
 }

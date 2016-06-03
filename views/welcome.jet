@@ -1,8 +1,8 @@
 {{ extends "layout.jet" }}
 {{ block content }}
   {{if .Gophers}}
-  <h1 class="center"> Welcome to This App</h1>
+    <h1 class="center"> Welcome to This App</h1>
   {{ else }}
-  <h2>No Gophers Yet!</h2>
+    <h4 class="center empty-list">Aún no tenemos ningun Gopher, nos ayudas?</h4>
   {{ end }}
 {{ end }}

@@ -1,3 +1,9 @@
+<p class="center">
+
+</p>
 <header>
-  <h3 class="center">Gophers BAQ List</h3>
+  <image src="/images/marimonGo.png" width="80px" class="pull-left"/>
+  <h3 class="pull-left">
+    <span>GophersBAQ List</span>
+  </h3>
 </header>

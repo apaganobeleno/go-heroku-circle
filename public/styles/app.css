@@ -11,3 +11,8 @@ header {
   height: 70px;
   background-color: #F5F5F5;
 }
+.empty-list {
+  color: #ccc;
+  font-weight: 300;
+  padding: 30px;
+}
