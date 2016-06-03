@@ -9,7 +9,7 @@ import (
 
 //Landing is a basic handler for this templo app
 func Landing(w http.ResponseWriter, r *http.Request) {
-	view, err := views.GetTemplate("welcome.jet")
+	view, err := views.GetTemplate("welcome.html")
 	if err != nil {
 		log.Println("Unexpected template err:", err.Error())
 		return
