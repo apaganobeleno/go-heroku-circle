@@ -10,3 +10,9 @@ dependencies:
 test:
   pre:
     - transporter up circleci
+
+deployment:
+  wwco:
+    branch: wwco-presentation-demo
+    heroku:
+      appname: blooming-oasis-78769
