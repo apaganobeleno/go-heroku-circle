@@ -9,3 +9,7 @@ test:
 circleci:
   driver: postgres
   url: "postgres://ubuntu:@127.0.0.1:5432/circle_test"
+
+production:
+  driver: postgres
+  url: "postgres://evzgyubseakspv:6zP01ZJ9OmvPzSPoGmonXSquN8@ec2-54-221-225-242.compute-1.amazonaws.com:5432/d2jqlco0k2hl92"
