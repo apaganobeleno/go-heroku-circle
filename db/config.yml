@@ -1,0 +1,7 @@
+development:
+  driver: postgres
+  url: "postgres://gophers@localhost:5432/gophers?sslmode=disable"
+
+test:
+  driver: postgres
+  url: "postgres://gophers@localhost:5432/gophers_test?sslmode=disable"

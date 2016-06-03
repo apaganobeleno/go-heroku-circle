@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/apaganobeleno/go-heroku-circle/db"
 	"github.com/apaganobeleno/go-heroku-circle/models"
 )
 
@@ -14,9 +15,15 @@ func Landing(w http.ResponseWriter, r *http.Request) {
 		log.Println("Unexpected template err:", err.Error())
 		return
 	}
+
+	DB, _ := db.Connection()
+
+	gophers := []models.Gopher{}
+	DB.Find(&gophers)
+
 	model := struct {
 		Gophers []models.Gopher
-	}{nil}
+	}{gophers}
 
 	view.Execute(w, nil, model)
 }

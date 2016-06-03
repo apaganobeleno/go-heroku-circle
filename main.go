@@ -17,6 +17,7 @@ var port = portWithDefault("3000")
 func main() {
 	loadEnvironmentFromFile()
 	checkDBConnection()
+	defer db.CloseConnection()
 
 	router := routing.BuildRouter()
 	n := negroni.Classic()

@@ -9,10 +9,10 @@ func init() {
 		Identifier: 1464969180108881647,
 		Up: func(tx *transporter.Tx) {
 			tx.Exec(`
-        CREATE TABLE  IF NOT EXISTS baq_gophers (
+        CREATE TABLE IF NOT EXISTS baq_gophers (
           id integer NOT NULL,
           name character varying(255),
-          company character varying(255),
+          company character varying(255)
         );
 
         CREATE SEQUENCE baq_gophers_id_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;

@@ -1,7 +1,11 @@
 {{ extends "layout.html" }}
 {{ block content }}
   {{if .Gophers}}
-    <h1 class="center"> Welcome to This App</h1>
+    {{range .Gophers}}
+      <div class="gopher-container">
+        <h4 class=""> Name: {{.Name}}</h1>
+      </div>
+    {{ end }}
   {{ else }}
     <h4 class="center empty-list">Aún no tenemos ningun Gopher, nos ayudas?</h4>
   {{ end }}
