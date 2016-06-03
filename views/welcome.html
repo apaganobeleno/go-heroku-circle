@@ -6,7 +6,9 @@
       <div class="gopher-container">
         <h4 class=""> Name: {{.Name}}</h1>
       </div>
-
+      <form action="/delete/{{.ID}}" method="post">
+        <button class="btn btn-danger" type="submit">Delete</button>
+      </form>
     {{ end }}
     <a data-toggle="modal"  data-target="#createModal">Agregar Otro</a>
   {{ else }}

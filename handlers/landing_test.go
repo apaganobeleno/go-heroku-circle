@@ -4,10 +4,12 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"net/url"
+	"strconv"
 	"testing"
 
 	"github.com/apaganobeleno/go-heroku-circle/db"
 	"github.com/apaganobeleno/go-heroku-circle/models"
+	"github.com/bmizerany/pat"
 	"github.com/stretchr/testify/assert"
 	"github.com/wawandco/fako"
 )
@@ -68,4 +70,40 @@ func TestCreateGopher(t *testing.T) {
 
 	assert.Equal(t, rw.Code, 302)
 	assert.Equal(t, countAfter, count+1)
+}
+
+func TestDeleteGopher(t *testing.T) {
+	DB, _ := db.TestConnection()
+
+	gopher := models.Gopher{}
+	fako.Fill(&gopher)
+	DB.Create(&gopher)
+
+	id := gopher.ID
+	route := "/delete/" + strconv.Itoa(id)
+
+	req, _ := http.NewRequest("POST", route, nil)
+	rw := httptest.NewRecorder()
+
+	router := pat.New()
+	router.Post("/delete/:id", http.HandlerFunc(DeleteGopher))
+	router.ServeHTTP(rw, req)
+
+	var found models.Gopher
+	DB.Model(&models.Gopher{}).Find(&gopher).Where("id = ?", id)
+
+	assert.Equal(t, rw.Code, 302)
+	assert.Equal(t, found.ID, 0)
+
+}
+
+func TestDeleteGopherNotExisting(t *testing.T) {
+	req, _ := http.NewRequest("POST", "/delete/200", nil)
+	rw := httptest.NewRecorder()
+
+	router := pat.New()
+	router.Post("/delete/:id", http.HandlerFunc(DeleteGopher))
+	router.ServeHTTP(rw, req)
+
+	assert.Equal(t, rw.Code, 302)
 }

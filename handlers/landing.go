@@ -30,12 +30,21 @@ func Landing(w http.ResponseWriter, r *http.Request) {
 
 func CreateGopher(w http.ResponseWriter, r *http.Request) {
 	DB, _ := db.Connection()
-	log.Println(r.Form)
-
 	gopher := models.Gopher{}
 	gopher.Name = r.FormValue("Name")
 	gopher.Company = r.FormValue("Company")
 	DB.Create(&gopher)
+
+	http.Redirect(w, r, "/", 302)
+}
+
+func DeleteGopher(w http.ResponseWriter, r *http.Request) {
+	DB, _ := db.Connection()
+	id := r.URL.Query().Get(":id")
+
+	found := models.Gopher{}
+	DB.Find(&found).Where("id = ?", id)
+	DB.Delete(&found)
 
 	http.Redirect(w, r, "/", 302)
 }
