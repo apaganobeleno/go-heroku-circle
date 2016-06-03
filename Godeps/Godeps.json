@@ -25,8 +25,17 @@
 			"Rev": "c7477ad8e330bef55bf1ebe300cf8aa67c492d1b"
 		},
 		{
+			"ImportPath": "github.com/crufter/copyrecur",
+			"Rev": "e7483df5e526fd581f56707878a99a22a86f337c"
+		},
+		{
 			"ImportPath": "github.com/davecgh/go-spew/spew",
 			"Rev": "5215b55f46b2b919f50a1df0eaa5886afe4e3b3d"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.2-125-gd512f20",
+			"Rev": "d512f204a577a4ab037a1816604c48c9c13210be"
 		},
 		{
 			"ImportPath": "github.com/jinzhu/gorm",
@@ -65,9 +74,37 @@
 			"Rev": "d8ed2627bdf02c080bf22230dbb337003b7aba2d"
 		},
 		{
+			"ImportPath": "github.com/serenize/snaker",
+			"Rev": "d88cc11617e4f179fa2c821a60908d5fabd7bdad"
+		},
+		{
 			"ImportPath": "github.com/stretchr/testify/assert",
 			"Comment": "v1.0-80-g67106a5",
 			"Rev": "67106a5111a06241c8d84952c33214675f51a34a"
+		},
+		{
+			"ImportPath": "github.com/wawandco/fako",
+			"Rev": "2791fe78339a402d16471caba07e58dce3210dbd"
+		},
+		{
+			"ImportPath": "github.com/wawandco/fako/Godeps/_workspace/src/github.com/icrowley/fake",
+			"Rev": "2791fe78339a402d16471caba07e58dce3210dbd"
+		},
+		{
+			"ImportPath": "github.com/wawandco/transporter/core",
+			"Rev": "32960cc67b24c8cb068b5741bc7a6f647e15be7a"
+		},
+		{
+			"ImportPath": "github.com/wawandco/transporter/managers",
+			"Rev": "32960cc67b24c8cb068b5741bc7a6f647e15be7a"
+		},
+		{
+			"ImportPath": "github.com/wawandco/transporter/utils",
+			"Rev": "32960cc67b24c8cb068b5741bc7a6f647e15be7a"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v1",
+			"Rev": "9f9df34309c04878acc86042b16630b0f696e1de"
 		}
 	]
 }
