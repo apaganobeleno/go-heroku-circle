@@ -16,7 +16,7 @@ func TestLanding(t *testing.T) {
 	DB, _ := db.TestConnection()
 	DB.Exec("truncate baq_gophers;")
 
-	req, _ := http.NewRequest(http.MethodGet, "/", nil)
+	req, _ := http.NewRequest("GET", "/", nil)
 	resp := httptest.NewRecorder()
 
 	Landing(resp, req)
@@ -38,7 +38,7 @@ func TestLandingWithGophers(t *testing.T) {
 		gophers = append(gophers, gopher)
 	}
 
-	req, _ := http.NewRequest(http.MethodGet, "/", nil)
+	req, _ := http.NewRequest("GET", "/", nil)
 	resp := httptest.NewRecorder()
 
 	Landing(resp, req)
