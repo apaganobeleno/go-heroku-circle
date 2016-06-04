@@ -1,15 +1,21 @@
 {{ extends "layout.html" }}
-
 {{ block content }}
   {{if .Gophers}}
     {{range .Gophers}}
       <div class="gopher-container">
-        <h4 class=""> Name: {{.Name}}</h1>
+        <div class="pull-left">
+          <span class=""> {{.Name}}</span>
+          <span class="company"></span>
+        </div>
+
+        <form action="/delete/{{.ID}}" method="POST" class="pull-right">
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
       </div>
     {{ end }}
+    <a data-toggle="modal"  data-target="#createModal">Agregar Otro</a>
   {{ else }}
     <h4 class="center empty-list">Aún no tenemos ningun Gopher, <a data-toggle="modal"  data-target="#createModal">nos ayudas?</a></h4>
   {{ end }}
-
   {{include "common/modal.html"}}
 {{ end }}

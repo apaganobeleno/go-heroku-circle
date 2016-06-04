@@ -5,3 +5,7 @@ development:
 test:
   driver: postgres
   url: "postgres://gophers@localhost:5432/gophers_test?sslmode=disable"
+
+circleci:
+  driver: postgres
+  url: "postgres://ubuntu:@127.0.0.1:5432/circle_test"

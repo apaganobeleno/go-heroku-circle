@@ -27,3 +27,7 @@ func Landing(w http.ResponseWriter, r *http.Request) {
 
 	view.Execute(w, nil, model)
 }
+
+func Redirect(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/", 302)
+}

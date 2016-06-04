@@ -16,3 +16,32 @@ header {
   font-weight: 300;
   padding: 30px;
 }
+
+.gopher-container{
+  padding: 8px;
+  height: 50px;
+  vertical-align: middle;
+  background-color: #F5F5F5;
+  margin-top: 5px;
+}
+
+.gopher-container .info{
+  margin-left: 10px;
+}
+
+.gopher-container .name{
+  font-weight: bold;
+  font-size: 15px;
+  display: block;
+
+}
+.gopher-container .company{
+  font-weight: light;
+  font-size: 11px;
+  margin-top: -4px;
+  display: block;
+}
+
+.gopher-container:nth-child(2n+1){
+  background-color: #FBFBFB;
+}

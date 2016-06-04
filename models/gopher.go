@@ -2,9 +2,9 @@ package models
 
 //Gopher is a member of the BAQ Golang meetup
 type Gopher struct {
-	ID      int `gorm:"primary_key;column:id"`
-	Name    string
-	Company string
+	ID      int    `gorm:"primary_key;column:id"`
+	Name    string `fako:"full_name"`
+	Company string `fako:"company"`
 }
 
 //TableName defines our table name for GORM which in
