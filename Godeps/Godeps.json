@@ -38,6 +38,10 @@
 			"Rev": "d512f204a577a4ab037a1816604c48c9c13210be"
 		},
 		{
+			"ImportPath": "github.com/icrowley/fake",
+			"Rev": "84bff6d01560fb0b5a396ba29534e93fd00d09c6"
+		},
+		{
 			"ImportPath": "github.com/jinzhu/gorm",
 			"Rev": "83002c4d5f060f4819bfd2115b76a0e1429a7f32"
 		},
@@ -84,10 +88,6 @@
 		},
 		{
 			"ImportPath": "github.com/wawandco/fako",
-			"Rev": "2791fe78339a402d16471caba07e58dce3210dbd"
-		},
-		{
-			"ImportPath": "github.com/wawandco/fako/Godeps/_workspace/src/github.com/icrowley/fake",
 			"Rev": "2791fe78339a402d16471caba07e58dce3210dbd"
 		},
 		{
