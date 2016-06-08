@@ -11,8 +11,8 @@ test:
   pre:
     - transporter up circleci
 
-# deployment:
-#   wwco:
-#     branch: wwco-presentation-demo
-#     heroku:
-#       appname: blooming-oasis-78769
+deployment:
+  wwco:
+    branch: development
+    heroku:
+      appname: fast-thicket-54675
