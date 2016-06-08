@@ -12,7 +12,7 @@ import (
 func BuildRouter() *pat.PatternServeMux {
 	router := pat.New()
 	router.Get("/", http.HandlerFunc(handlers.Landing))
-	router.Post("/create", http.HandlerFunc(handlers.Redirect))
+	router.Post("/create", http.HandlerFunc(handlers.CreateGopher))
 	router.Post("/delete/:id", http.HandlerFunc(handlers.Redirect))
 	return router
 }
